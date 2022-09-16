@@ -19,7 +19,7 @@
 
 % Add graphics path
 \usepackage{graphicx}
-\graphicspath{{img/}{clips/}}
+\graphicspath{{images/}{clips/}}
 
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
@@ -29,8 +29,11 @@
 
 % Define graphics for logo
 \titlegraphic{%
-  \includegraphics[height=.125\textheight]{BostonUni.png} \hfill
-  \includegraphics[height=.125\textheight]{CEL_Logo.eps}
+    \begin{figure}[b]
+        \includegraphics[height=.125\textheight]{BostonUni.png} \hfill
+        \includegraphics[height=.125\textheight]{images/sptl_v2.png}
+    \end{figure}
+  
 }
 % Setting title page to be centered, and add logos at the bottom
 \makeatletter
