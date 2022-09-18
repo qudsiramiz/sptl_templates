@@ -1,18 +1,27 @@
 \documentclass[10pt,xcolor=table]{beamer}
-
+%\usepackage{natbib}
+%\mode<presentation> {
+%    \usetheme{sptl}
+%    \usecolortheme{default}
+%    \usefonttheme{serif}
+%    \setbeamertemplate{navigation symbols}{}
+%    \setbeamertemplate{caption}[numbered]
+%}
 % Use the preamble setting
 \input{preamble}
 
 % Title and logo
-\title{Some Title for Presentation on some Random Research Topic}
-\subtitle{Some other details related to subtitle}
+\title[A shorter title]{Some Title for Presentation on some Random Research Topic}
+\subtitle[test]{Some other details related to subtitle}
 \date{\today}
-\author{First Last Names}
+\author[alphazeta@bu.edu]{Alpha B. Zeta}
+\institute[SPTL, BU]{Center for Space Physics, Boston University}
 
-% Add bibliography file
-\bibliography{reference}
+% Add bibliography file. You can change bibliography style in preamble.tex file.
+\bibliography{bibliographies/Papers}
 
 \begin{document}
+
 % Make the title
 {
 % Uncomment the following to dismiss the transparent background crest
@@ -61,8 +70,6 @@
   You can also split things into two columns and arrange them as so.
   
   \vspace{0.8cm}
-  % Quick fix to citation for subfigures
-  \sbox1{\hbox{\footfullcite[1]{cat}}}
 \end{frame}
 
 % Section 2
@@ -76,7 +83,7 @@
   \vspace{-0.4cm}
   \begin{itemize}
   \item This is a picture of a happy hedgehog.
-  \item You can even cite where this hedgehog is from \footfullcite{hedgehog}.
+  \item You can even cite where this hedgehog is from.
   \end{itemize}
   \vspace{0.15cm}
 \end{frame}
@@ -107,8 +114,6 @@
   \end{columns}
   \vspace{0.25cm}
   % Again, fix for the citation at the bottom
-  \sbox1{\hbox{\footfullcite[2]{gecko}}}
-  \sbox1{\hbox{\footfullcite[3]{eagle}}}
 \end{frame}
 
 
@@ -126,6 +131,58 @@
     \caption{Two mantis on a wig.}
   \end{figure}
 \end{frame}
+
+% Some more results
+\section{Some more results}
+\begin{frame}
+  \frametitle{More Results}
+  \begin{itemize}
+  \item This is an interesting result
+  \item We need to talk more about it
+  \end{itemize}
+\end{frame}
+
+% Some more results
+\section{Some serious results}
+\begin{frame}
+  \frametitle{More Results}
+  \begin{itemize}
+  \item This is an interesting result
+  \item We need to talk more about it
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{More Results}
+  \begin{itemize}
+  \item This is an interesting result
+  \item We need to talk more about it
+  \end{itemize}
+\end{frame}
+\begin{frame}
+  \frametitle{More Results}
+  \begin{itemize}
+  \item This is an interesting result
+  \item We need to talk more about it
+  \end{itemize}
+\end{frame}
+\begin{frame}
+  \frametitle{More Results}
+  \begin{itemize}
+  \item This is an interesting result
+  \item We need to talk more about it
+  \end{itemize}
+\end{frame}
+% Some more results
+\section{Some more serious results}
+\begin{frame}
+  \frametitle{More Results}
+  \begin{itemize}
+  \item This is an interesting result
+  \item We need to talk more about it
+  \end{itemize}
+\end{frame}
+
 
 % Conclusion and Further work
 \section{Conclusion and Further work}

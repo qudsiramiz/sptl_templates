@@ -14,6 +14,7 @@
 \setbeamercolor*{author in head/foot}{parent=palette tertiary}
 \setbeamercolor*{title in head/foot}{parent=palette secondary}
 \setbeamercolor*{date in head/foot}{parent=palette primary}
+\setbeamercolor*{page number in head/foot}{parent=palette tertiary}
 
 \setbeamercolor*{section in head/foot}{parent=palette tertiary}
 \setbeamercolor*{subsection in head/foot}{parent=palette primary}
@@ -24,20 +25,24 @@
 {%
   \leavevmode%
   \hbox{%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+  \begin{beamercolorbox}[wd=.315\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
     \usebeamerfont{author in head/foot}\insertshortauthor\expandafter\ifblank\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+  \begin{beamercolorbox}[wd=.315\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
     \usebeamerfont{title in head/foot}\insertshorttitle
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,leftskip=2ex,rightskip=2ex,sep=0pt]{date in head/foot}%
+  \begin{beamercolorbox}[wd=.315\paperwidth,ht=2.25ex,dp=1ex,leftskip=2ex,rightskip=2ex,sep=0pt]{date in head/foot}%
     \hfill%
     \usebeamerfont{date in head/foot}%
     \insertshortdate{}%
     \hfill%
-    \usebeamercolor[fg]{page number in head/foot}%
+  \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.055\paperwidth,ht=2.25ex,dp=1ex,leftskip=1ex,rightskip=1ex,sep=0pt]{page number in head/foot}%
+    \hfill%
     \usebeamerfont{page number in head/foot}%
+    \hfill%
     \usebeamertemplate{page number in head/foot}%
+    \hfill%
   \end{beamercolorbox}}%
   \vskip0pt%
 }

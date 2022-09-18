@@ -1,7 +1,5 @@
 % Beamer theme
-\usetheme[titleformat=allcaps, progressbar=foot,
-          titleformat title=allcaps, titleformat subtitle=allcaps,
-          titleformat section=smallcaps, titleformat frame=smallcaps]{metropolis}
+\usetheme{sptl}
 % Settings to have progress bar at the top
 \useoutertheme[subsection=false]{miniframes}
 \useinnertheme{circles}
@@ -74,20 +72,22 @@
 
 % URL
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=gray,
+    citecolor=blue,
+    filecolor=magenta,      
+    urlcolor=magenta,
+    pdfpagemode=FullScreen,
+    }
+
+% references
+\usepackage{cleveref}
 
 % Citation
-\usepackage[backend=bibtex, style=science]{biblatex}
-% Hacky fix to citation
-\makeatletter
-\def\blx@maxline{77}
-\makeatother
-% Reduce font size for citation
-\setbeamerfont{bibliography item}{size=\footnotesize}
-\setbeamerfont{bibliography entry author}{size=\footnotesize}
-\setbeamerfont{bibliography entry title}{size=\footnotesize}
-\setbeamerfont{bibliography entry location}{size=\footnotesize}
-\setbeamerfont{bibliography entry note}{size=\footnotesize}
-\renewcommand{\footnotesize}{\tiny}
+%style options = "numeric", "alphabetic", "authoryear", "authortitle", "verbose", "reading"
+% Check this link for more options: "https://www.overleaf.com/learn/latex/Biblatex_citation_styles"
+\usepackage[backend=bibtex,style=alphabetic]{biblatex}
 
 % Change caption font size
 \usepackage[font=scriptsize, labelfont=bf]{caption}
