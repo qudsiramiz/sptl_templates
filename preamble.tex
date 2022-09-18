@@ -1,5 +1,14 @@
 % Beamer theme
-\usetheme{sptl}
+%\usetheme{sptl}
+\mode<presentation>
+{
+	\usetheme{sptl}
+	%\usecolortheme{default}
+	\usefonttheme{serif}
+	%\setbeamertemplate{navigation symbols}{}
+	%\setbeamertemplate{caption}[numbered]
+} 
+
 % Settings to have progress bar at the top
 \useoutertheme[subsection=false]{miniframes}
 \useinnertheme{circles}
@@ -70,6 +79,9 @@
 % Manage frame numbering in beamer's appendixes
 \usepackage{appendixnumberbeamer}
 
+% references
+% \usepackage{cleveref}
+
 % URL
 \usepackage{hyperref}
 \hypersetup{
@@ -80,9 +92,6 @@
     urlcolor=magenta,
     pdfpagemode=FullScreen,
     }
-
-% references
-\usepackage{cleveref}
 
 % Citation
 %style options = "numeric", "alphabetic", "authoryear", "authortitle", "verbose", "reading"

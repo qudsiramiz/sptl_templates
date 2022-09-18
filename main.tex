@@ -29,24 +29,72 @@
 \maketitle
 }
 
+%\begin{frame}
+%	\titlepage
+%	\begin{center}
+%	\textbf{Arcetri Meeting}
+%	\end{center}
+%
+%\end{frame}
+
 % Setting all titles to be centered
-\setbeamertemplate{frametitle}[default][center]
+%\setbeamertemplate{frametitle}[default][center]
 
 % Table of content
 \begin{frame}[plain]{Table of Contents}
   \setbeamertemplate{section in toc}[sections numbered]
-  \tableofcontents[hideallsubsections]
+  %\tableofcontents[hideallsubsections]
+  \tableofcontents[currentsubsection,sectionstyle=show,subsectionstyle=show/shaded]
 \end{frame}
 
 % Section 1
-\section{Introduction}
+\section[Intro]{Introduction}
+    \begin{frame}{A simple sample for a slide}
+        \begin{itemize}
+            \item Something important goes here.
+            \item This is the other bullet point.
+            \item can change the bullet style
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{List of objects using enumerate}
+        How to itemize a list with different options:
+        \begin{enumerate} %Options: [I], [(a)], 
+            \item You can use [I] for numbering in upper case Roman numerals
+            \item Use this [(a)] for numbering by letters
+        \end{enumerate}
+    
+        \begin{itemize}
+            \item This is the default bullet option
+            \item[!] A point to exclaim something!
+            \item[$\blacksquare$] Make the point fair and square.
+            \item[NOTE] This entry has no bullet
+            \item[] A blank label?
+        \end{itemize}
+    \end{frame}
+
+
 \begin{frame}
-  \frametitle{A plain simple one}
-  \begin{itemize}
-  \item This is a simple frame.
-  \item It has nothing but just bullet points.
-  \end{itemize}
-  You can also have things without bullet points.
+    How to show a specific text or image on only one slide?
+    % On all slides
+	\begin{center}
+		\includegraphics[width=1.5in]{images/lexi_01.jpg}\hspace{0.25in}
+	\end{center}
+	% Only on the first slide
+	\onslide<1>{
+	    \begin{align*}
+	        Author~et~al.~~(\textit{Journal}, 2022)\\
+	        \rm{This~is~only~on~slide~1}
+	    \end{align*}
+	    }
+	% On slide 2 and 3 to the last slide
+	\onslide<1-2>{
+		\vspace{-0.2in}
+		\begin{itemize}
+			\item This item is only on slide 1 and 2.
+		\end{itemize}
+	}
+	\onslide<3->{On slide 3 and above}
 \end{frame}
 
 \begin{frame}
@@ -54,18 +102,18 @@
   \begin{columns}
     \begin{column}{.44\textwidth}
       \begin{figure}[t]
-        \includegraphics[width=0.8\textwidth]{lexi_01.HEIC}
-        \caption{A picture of a cat in a pot hole\footnotemark[1].}
+        \includegraphics[width=0.8\textwidth]{lexi_01.jpg}
+        \caption{A picture of a LEXI\footnotemark[1].}
       \end{figure}
     \end{column}
     \begin{column}{.60\textwidth}
       Observations:
         \begin{itemize}
-        \item There is a cat.
-        \item It looks like it's stuck in a pot hole.
+        \item A picture of instrument.
+        \item It looks good.
         \end{itemize}
-    \end{column}
-  \end{columns}
+        \end{column}
+    \end{columns}
 
   You can also split things into two columns and arrange them as so.
   
@@ -77,7 +125,7 @@
 \begin{frame}
   \frametitle{How to perform research}
   \begin{figure}
-    \includegraphics[width=0.5\textwidth]{lexi_01.HEIC}
+    \includegraphics[width=0.5\textwidth]{lexi_01.jpg}
     \caption{Hedgehog posing in a tiny kayak.}
   \end{figure}
   \vspace{-0.4cm}
@@ -93,7 +141,7 @@
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{figure}
-        \includegraphics[width=0.45\textwidth]{lexi_01.HEIC}
+        \includegraphics[width=0.45\textwidth]{lexi_01.jpg}
         \caption{Gecko strumming a leaf\footnotemark[2].}
       \end{figure}
       \begin{itemize}
@@ -103,7 +151,7 @@
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{figure}
-        \includegraphics[width=0.45\textwidth]{lexi_01.HEIC}
+        \includegraphics[width=0.45\textwidth]{lexi_01.jpg}
         \caption{Bald eagle over ice\footnotemark[3].}
       \end{figure}
       \begin{itemize}
