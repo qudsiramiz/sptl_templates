@@ -42,9 +42,9 @@
 
 % Table of content
 \begin{frame}[plain]{Table of Contents}
-  \setbeamertemplate{section in toc}[sections numbered]
-  %\tableofcontents[hideallsubsections]
-  \tableofcontents[currentsubsection,sectionstyle=show,subsectionstyle=show/shaded]
+    \setbeamertemplate{section in toc}[sections numbered]
+    %\tableofcontents[hideallsubsections]
+    \tableofcontents[currentsubsection,sectionstyle=show,subsectionstyle=show/shaded]
 \end{frame}
 
 % Section 1
@@ -77,91 +77,88 @@
 \begin{frame}
     How to show a specific text or image on only one slide?
     % On all slides
-	\begin{center}
-		\includegraphics[width=1.5in]{images/lexi_01.jpg}\hspace{0.25in}
-	\end{center}
-	% Only on the first slide
-	\onslide<1>{
-	    \begin{align*}
-	        Author~et~al.~~(\textit{Journal}, 2022)\\
-	        \rm{This~is~only~on~slide~1}
-	    \end{align*}
-	    }
-	% On slide 2 and 3 to the last slide
-	\onslide<1-2>{
-		\vspace{-0.2in}
-		\begin{itemize}
-			\item This item is only on slide 1 and 2.
-		\end{itemize}
-	}
-	\onslide<3->{On slide 3 and above}
+    \begin{center}
+        \includegraphics[width=1.5in]{images/lexi_01.jpg}\hspace{0.25in}
+    \end{center}
+    % Only on the first slide
+  \onslide<1>{
+        \begin{align*}
+            Author~et~al.~~(\textit{Journal}, 2022)\\
+            \rm{This~is~only~on~slide~1}
+        \end{align*}
+    }
+
+    % On slide 2 and 3 to the last slide
+    \onslide<1-2>{
+        \vspace{-0.2in}
+        \begin{itemize}
+            \item This item is only on slide 1 and 2.
+        \end{itemize}
+    }
+    \onslide<3->{On slide 3 and above}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Unusual layout frame}
-  \begin{columns}
-    \begin{column}{.44\textwidth}
-      \begin{figure}[t]
-        \includegraphics[width=0.8\textwidth]{lexi_01.jpg}
-        \caption{A picture of a LEXI\footnotemark[1].}
-      \end{figure}
-    \end{column}
-    \begin{column}{.60\textwidth}
+    \frametitle{Unusual layout frame}
+        \begin{columns}
+            \begin{column}{.44\textwidth}
+                \begin{figure}[t]
+                    \includegraphics[width=0.8\textwidth]{lexi_01.jpg}
+                    \caption{A picture of a LEXI\footnotemark[1].}
+                \end{figure}
+            \end{column}
+        \begin{column}{.60\textwidth}
       Observations:
-        \begin{itemize}
-        \item A picture of instrument.
-        \item It looks good.
-        \end{itemize}
+            \begin{itemize}
+                \item A picture of instrument.
+                \item It looks good.
+            \end{itemize}
         \end{column}
     \end{columns}
-
-  You can also split things into two columns and arrange them as so.
-  
-  \vspace{0.8cm}
+    You can also split things into two columns and arrange them as so.
+    \vspace{0.8cm}
 \end{frame}
 
 % Section 2
 \section{Methodology}
 \begin{frame}
-  \frametitle{How to perform research}
-  \begin{figure}
-    \includegraphics[width=0.5\textwidth]{lexi_01.jpg}
-    \caption{Hedgehog posing in a tiny kayak.}
-  \end{figure}
-  \vspace{-0.4cm}
-  \begin{itemize}
-  \item This is a picture of a happy hedgehog.
-  \item You can even cite where this hedgehog is from.
-  \end{itemize}
-  \vspace{0.15cm}
+    \frametitle{How to perform research}
+    \begin{figure}
+        \includegraphics[width=0.5\textwidth]{lexi_01.jpg}
+        \caption{Hedgehog posing in a tiny kayak.}
+    \end{figure}
+    \vspace{-0.4cm}
+    \begin{itemize}
+        \item This is a picture of a happy hedgehog.
+        \item You can even cite where this hedgehog is from.
+    \end{itemize}
+    \vspace{0.15cm}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Concurrent vs Information-passing}
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \begin{figure}
-        \includegraphics[width=0.45\textwidth]{lexi_01.jpg}
-        \caption{Gecko strumming a leaf\footnotemark[2].}
-      \end{figure}
-      \begin{itemize}
-      \item He pulled out his guitar:
-      \item `Anyway, here's Wonderwall.'
-      \end{itemize}
+    \frametitle{Concurrent vs Information-passing}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \includegraphics[width=0.45\textwidth]{lexi_01.jpg}
+                \caption{Gecko strumming a leaf\footnotemark[2].}
+            \end{figure}
+        \begin{itemize}
+            \item He pulled out his guitar:
+            \item `Anyway, here's Wonderwall.'
+        \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
-      \begin{figure}
-        \includegraphics[width=0.45\textwidth]{lexi_01.jpg}
-        \caption{Bald eagle over ice\footnotemark[3].}
-      \end{figure}
-      \begin{itemize}
-      \item `\textit{When will my reflection shows...}'
-      \item `\textit{...who I am, inside}.'
-      \end{itemize}      
-    \end{column}    
-  \end{columns}
-  \vspace{0.25cm}
-  % Again, fix for the citation at the bottom
+        \begin{figure}
+            \includegraphics[width=0.45\textwidth]{lexi_01.jpg}
+            \caption{Bald eagle over ice\footnotemark[3].}
+        \end{figure}
+        \begin{itemize}
+            \item `\textit{When will my reflection shows...}'
+            \item `\textit{...who I am, inside}.'
+        \end{itemize}
+    \end{column}
+    \vspace{0.25cm}
 \end{frame}
 
 
