@@ -1,12 +1,5 @@
 \documentclass[10pt,xcolor=table]{beamer}
-%\usepackage{natbib}
-%\mode<presentation> {
-%    \usetheme{sptl}
-%    \usecolortheme{default}
-%    \usefonttheme{serif}
-%    \setbeamertemplate{navigation symbols}{}
-%    \setbeamertemplate{caption}[numbered]
-%}
+
 % Use the preamble setting
 \input{preamble}
 
@@ -22,23 +15,16 @@
 
 \begin{document}
 
-% Make the title
-{
-% Uncomment the following to dismiss the transparent background crest
-\setbeamertemplate{background}{\tikz[remember picture,overlay]\node[opacity=0.04] at (current page.center) {\includegraphics[height=0.8\paperheight,keepaspectratio]{BostonUni_Crest.eps}};}
-\maketitle
-}
+    % Make the title
+    {
+    % Uncomment the following to dismiss the transparent background crest
+    \setbeamertemplate{background}{\tikz[remember picture,overlay]\node[opacity=0.04] at (current page.center) {\includegraphics[height=0.8\paperheight,keepaspectratio]{BostonUni_Crest.eps}};}
+    \maketitle
+    }
 
-%\begin{frame}
-%	\titlepage
-%	\begin{center}
-%	\textbf{Arcetri Meeting}
-%	\end{center}
-%
-%\end{frame}
-
-% Setting all titles to be centered
-%\setbeamertemplate{frametitle}[default][center]
+% Setting all titles to be centered. Comment out the next line if you want to use the default
+% setting of left aligned titles
+\setbeamertemplate{frametitle}[default][center]
 
 % Table of content
 \begin{frame}[plain]{Table of Contents}
@@ -161,36 +147,37 @@
 \end{frame}
 
 
-% Results
-\section{Results}
-\begin{frame}{This section contain results}
-    \begin{itemize}
-        \item An important result is....
-        \item Other results are 
-    \end{itemize}  
-  %\begin{figure}
-  %  \includegraphics[width=0.65\textwidth]{mantis}
-  %  \caption{Two mantis on a wig.}
-  %\end{figure}
-\end{frame}
+    % Results
+    \section{Results}
+    \begin{frame}{This section contain results}
+        \begin{itemize}
+            \item An important result is....
+            \item Other results are 
+        \end{itemize}  
+      %\begin{figure}
+      %  \includegraphics[width=0.65\textwidth]{mantis}
+      %  \caption{Two mantis on a wig.}
+      %\end{figure}
+    \end{frame}
 
-% Conclusion and Further work
-\section{Conclusion and Further work}
-\begin{frame}{Remarks}
-    These are some remarks about the work.
-    \begin{itemize}
-        \item This is the first remark.
-        \item Here is another remark.
-        \item This is the third remark.
-    \end{itemize}
-\end{frame}
+    % Conclusion and Further work
+    \section{Conclusion and Further work}
+    \begin{frame}{Remarks}
+        These are some remarks about the work.
+        \begin{itemize}
+            \item This is the first remark.
+            \item Here is another remark.
+            \item This is the third remark.
+        \end{itemize}
+    \end{frame}
 
 
-% Asking questions
-\begin{frame}{Questions}
-    \begin{itemize}
-        \item What is the meaning of life?
-        \item What is the meaning of the universe?
-        \item What is the meaning of everything?
-    \end{itemize}
+    % Asking questions
+    \begin{frame}{Questions}
+        \begin{itemize}
+            \item What is the meaning of life?
+            \item What is the meaning of the universe?
+            \item What is the meaning of everything?
+        \end{itemize}
+    \end{frame}
 \end{document}
