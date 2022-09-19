@@ -2,6 +2,12 @@
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}  % Change this to use different font, right now this is using Times font.
 \usepackage{geometry}
+\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{MnSymbol}
+%\usepackage{mathabx}
+%\usepackage{amsfonts}
+%\usepackage{mathalpha}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{lipsum}% Used for dummy text.
@@ -12,14 +18,13 @@
 \usepackage{caption}
 \captionsetup[table]{font=small,skip=0pt}
 \captionsetup[figure]{font=small,skip=5pt}
+\usepackage{subcaption}
 \usepackage{listings}
 \usepackage{hyperref}
 \usepackage{cleveref}
 \usepackage{natbib}
-\crefname{subsection}{subsection}{subsections}
-\usepackage{subcaption}
+%\crefname{subsection}{subsection}{subsections}
 \usepackage[acronym]{glossaries}
-\makeglossaries
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -36,8 +41,9 @@
 % A new command to insert a page without adding to the page number
 \newcommand\npnpn[1]{\clearpage\thispagestyle{empty}\addtocounter{page}{-1} \ \clearpage}
 
+\makeglossaries
 \begin{document}
-    \include{title_page}
+
     \include{abbreviation_list}
     \nopagecolor% Use this to restore the color pages to white
 
@@ -53,13 +59,21 @@
     \npnpn
     % % Include the sptl file at the bottom of the new page
 
-    \section[Intro]{Introduction}
-        \subsection[Short Title 1]{First subsection}
-            \lipsum[1-2] \citep{Acuna1995}
+    \include{title_page}
+    \section[LEXI Overview]{LEXI Overview}
+        \subsection[Short tile 1]{A subsection}
+        The \gls{lexi} \citep{Kuntz2022} is a soft X-ray
+
+        (0.1 - 2 keV) imager developed to provide wide field-of-view 
+        ($\sim$9.1$^{\circ}$ x 9.1$^{\circ}$) images of the interaction between the solar wind and 
+        Earth’s magnetosphere. The telescope will operate for roughly 6.5 days from the lunar surface 
+        on the Blue Ghost 1 lander from Mare Crisium. The project is led by \gls{bu} and is a 
+        collaboration with NASA Goddard, Johns Hopkins University, the University of Leicester, and the 
+        University of Miami. \gls{lexi} is part of NASA’s Lunar Science and Technology Program.
         \subsection[Short Title 2]{Second subsection}
             \lipsum[3-9]
             % Include a sample image
-            \begin{figure}[h]
+            \begin{figure}[ht]
                 \centering
                 \includegraphics[width=0.5\textwidth]{images/lexi_01.jpg}
                 \caption[First Fig]{This is a sample image of LEXI}
@@ -67,7 +81,7 @@
             \end{figure}
 
             % Include a sample table
-            \begin{table}[h]
+            \begin{table}[ht]
                 \centering
                 \caption[First Table]{This is a sample table}
                 \label{tab:sample_table}
