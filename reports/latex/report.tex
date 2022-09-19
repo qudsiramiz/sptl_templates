@@ -1,0 +1,51 @@
+\documentclass[12pt]{article} %% Remove demo in your file.
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{lipsum}% Used for dummy text.
+\definecolor{titlepagecolor}{rgb}{0.8, 0.0, 0.0}
+\definecolor{bured}{rgb}{0.8, 0.0, 0.0}
+%-----------------------------------------------------------------
+\begin{document}
+% ----------------------------------------------------------------
+\begin{titlepage}
+\newgeometry{left=7.5cm} %defines the geometry for the titlepage
+\pagecolor{titlepagecolor}
+\noindent
+% Insert your logo here
+\begin{figure}[h]
+\centering
+\includegraphics[height=1.5cm]{BostonUni.png}
+\end{figure}
+\vspace{1cm}
+
+
+\includegraphics[width=0.5\textwidth]{images/BostonUni.png}\\
+\color{white}
+%\makebox[0pt][l]{\rule{1.3\textwidth}{1pt}}
+\par
+\noindent
+\large{
+\textbf{\textsf{Space Physics and Technology Lab}}\\
+\vspace*{-1.5em}
+% Begin right align text
+\begin{flushright}
+    \textcolor{black}{\textsf{Boston University}}\\
+    %\textcolor{black}{\textsf{Department of Physics}}\\
+    %\textcolor{black}{\textsf{111 Cummington Mall}}\\
+    %\textcolor{black}{\textsf{Boston, MA 02215}}\\
+\end{flushright}
+}
+\vfill
+\noindent
+{\huge \textsf{Report Title}}\\
+\vskip\baselineskip
+\noindent
+\textcolor{black}{\textsf{Author Name}}\\
+\textcolor{black}{\today}\\
+\end{titlepage}
+\restoregeometry % restores the geometry
+\nopagecolor% Use this to restore the color pages to white
+% ----------------------------------------------------------------
+\lipsum[1-9]
+\end{document}
