@@ -21,18 +21,20 @@
 \setbeamercolor{example text}{fg=black, bg=white}
 
 % Change in the title color
-\definecolor{BostonUniRed}{rgb}{0.8, 0.0, 0.0}
-\setbeamercolor{frametitle}{fg=BostonUniRed, bg=BostonUniRed!10}
+\definecolor{bured}{rgb}{0.8, 0.0, 0.0}
+\setbeamercolor{frametitle}{fg=bured, bg=bured!10}
 
 % Add graphics path
 \usepackage{graphicx}
-\graphicspath{{images/}{clips/}}
+\graphicspath{{images/}}
 
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
 
-\usepackage{enumitem,xcolor}
-\renewcommand{\labelitemi}{$\textcolor{red}{\bullet}$}
+%\usepackage{enumitem}
+\usepackage{xcolor}
+\setbeamercolor{itemize item}{fg=bured}
+\setbeamercolor{local structure}{fg=bured}
 
 \usepackage{pgfplots}
 \usepgfplotslibrary{dateplot}
@@ -106,7 +108,7 @@
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    linkcolor=gray,
+    linkcolor=black,
     citecolor=blue,
     filecolor=magenta,      
     urlcolor=magenta,
