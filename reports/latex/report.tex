@@ -29,13 +29,13 @@
     colorlinks=true,
     linkcolor=blue,
     citecolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=magenta,
     pdfpagemode=FullScreen,
     }
 
-% Note: You can change the layout of page and author name and other details in the title_page.tex file
-% Define a color corresponding to the BU color.
+% Note: You can change the layout of page and author name and other details in the title_page.tex
+% file. Define a color corresponding to the BU color.
 \definecolor{bured}{rgb}{0.8, 0.0, 0.0}
 
 % A new command to insert a page without adding to the page number
@@ -44,7 +44,7 @@
 \makeglossaries
 \begin{document}
 
-    \include{abbreviation_list}
+    \include{title_page}
     \nopagecolor% Use this to restore the color pages to white
 
     %\npnpn
@@ -59,17 +59,16 @@
     \npnpn
     % % Include the sptl file at the bottom of the new page
 
-    \include{title_page}
+    \include{abbreviation_list}
     \section[LEXI Overview]{LEXI Overview}
         \subsection[Short tile 1]{A subsection}
-        The \gls{lexi} \citep{Kuntz2022} is a soft X-ray
-
-        (0.1 - 2 keV) imager developed to provide wide field-of-view 
-        ($\sim$9.1$^{\circ}$ x 9.1$^{\circ}$) images of the interaction between the solar wind and 
-        Earth’s magnetosphere. The telescope will operate for roughly 6.5 days from the lunar surface 
-        on the Blue Ghost 1 lander from Mare Crisium. The project is led by \gls{bu} and is a 
-        collaboration with NASA Goddard, Johns Hopkins University, the University of Leicester, and the 
-        University of Miami. \gls{lexi} is part of NASA’s Lunar Science and Technology Program.
+            The \gls{lexi} \citep{Kuntz2022} is a soft X-ray 0.1 - 2 keV) imager developed to
+            provide wide field-of-view ($\sim$9.1$^{\circ}$ x 9.1$^{\circ}$) images of the
+            interaction between the solar wind and Earth’s magnetosphere. The telescope will operate
+            for roughly 6.5 days from the lunar surface on the Blue Ghost 1 lander from Mare
+            Crisium. The project is led by \gls{bu} and is a collaboration with NASA Goddard, Johns
+            Hopkins University, the University of Leicester, and the University of Miami.
+            \gls{lexi} is part of NASA’s Lunar Science and Technology Program.
         \subsection[Short Title 2]{Second subsection}
             \lipsum[3-9]
             % Include a sample image
