@@ -68,24 +68,26 @@
             for roughly 6.5 days from the lunar surface on the Blue Ghost 1 lander from Mare
             Crisium. The project is led by \gls{bu} and is a collaboration with NASA Goddard, Johns
             Hopkins University, the University of Leicester, and the University of Miami.
-            \gls{lexi} is part of NASA’s Lunar Science and Technology Program.
+            \gls{lexi} is part of NASA’s Lunar Science and Technology Program. You can find more
+            details \href{https://sites.bu.edu/bwalsh/research/}{here}\footnote[1]{https://sites.bu.edu/bwalsh/research/}.
         \subsection[Short Title 2]{Second subsection}
-            \lipsum[3-9]
+            \lipsum[3-5]
             % Include a sample image
-            \begin{figure}[ht]
+            \begin{figure}[h]
                 \centering
-                \includegraphics[width=0.5\textwidth]{images/lexi_01.jpg}
+                \includegraphics[width=0.5\textwidth, angle=270]{images/lexi_01.jpg}
                 \caption[First Fig]{This is a sample image of LEXI}
                 \label{fig:lexi_01}
             \end{figure}
 
             % Include a sample table
-            \begin{table}[ht]
+            \begin{table}[h]
+                \def\arraystretch{1.25} % This is to manage the width of rows. Default is 1.0
                 \centering
                 \caption[First Table]{This is a sample table}
                 \label{tab:sample_table}
-                \begin{tabular}{| p {0.1\textwidth} | p {0.1\textwidth} | p {0.2\textwidth} |
-                    p {0.1\textwidth} | p {0.1\textwidth} |}
+                \begin{tabular}{| p {0.12\textwidth} | p {0.12\textwidth} | p {0.12\textwidth} |
+                    p {0.12\textwidth} | p {0.12\textwidth} |}
                     \hline
                     \textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} & \textbf{Column 4} &
                     \textbf{Column 5} \\
