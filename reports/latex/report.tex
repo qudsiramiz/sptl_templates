@@ -1,4 +1,4 @@
-\documentclass[12pt]{article} %% Remove demo in your file.
+\documentclass[12pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}  % Change this to use different font, right now this is using Times font.
 \usepackage{geometry}
@@ -10,7 +10,7 @@
 %\usepackage{mathalpha}
 \usepackage{xcolor}
 \usepackage{graphicx}
-\usepackage{lipsum}% Used for dummy text.
+\usepackage{lipsum} % Used for dummy text. Can remove it when you are making your report,
 \usepackage[yyyymmdd,hhmmss]{datetime}
 \usepackage{transparent}
 \usepackage{tabularx}
@@ -23,25 +23,37 @@
 \usepackage{hyperref}
 \usepackage{cleveref}
 \usepackage{natbib}
+\usepackage{imakeidx}
+\usepackage[toc,section=section]{glossaries}
+
+% Define a color corresponding to the BU color.
+\definecolor{bured}{rgb}{0.8, 0.0, 0.0}
+%\definecolor{bured}{cymk}{0, 100, 100, 20}
+ 
 %\crefname{subsection}{subsection}{subsections}
-\usepackage[acronym]{glossaries}
+\usepackage[ ]{glossaries}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    citecolor=blue,
+    citecolor=bured,
     filecolor=magenta,
     urlcolor=magenta,
     pdfpagemode=FullScreen,
     }
 
 % Note: You can change the layout of page and author name and other details in the title_page.tex
-% file. Define a color corresponding to the BU color.
-\definecolor{bured}{rgb}{0.8, 0.0, 0.0}
+% file.
 
 % A new command to insert a page without adding to the page number
 \newcommand\npnpn[1]{\clearpage\thispagestyle{empty}\addtocounter{page}{-1} \ \clearpage}
 
+% New glossary items should be added in the glossaries.tex file. 
 \makeglossaries
+
+% Make index
+% remove 'intoc' if you don't want the index to appear in the table of contents
+\makeindex[columns=2, title=Index, intoc, columnseprule]
+
 \begin{document}
 
     \include{title_page}
@@ -59,17 +71,22 @@
     \npnpn
     % % Include the sptl file at the bottom of the new page
 
-    \include{abbreviation_list}
+    \include{glossaries}
     \section[LEXI Overview]{LEXI Overview}
         \subsection[Short tile 1]{A subsection}
             The \gls{lexi} \citep{Kuntz2022} is a soft X-ray 0.1 - 2 keV) imager developed to
             provide wide field-of-view ($\sim$9.1$^{\circ}$ x 9.1$^{\circ}$) images of the
-            interaction between the solar wind and Earth’s magnetosphere. The telescope will operate
-            for roughly 6.5 days from the lunar surface on the Blue Ghost 1 lander from Mare
-            Crisium. The project is led by \gls{bu} and is a collaboration with NASA Goddard, Johns
-            Hopkins University, the University of Leicester, and the University of Miami.
-            \gls{lexi} is part of NASA’s Lunar Science and Technology Program. You can find more
-            details \href{https://sites.bu.edu/bwalsh/research/}{here}\footnote[1]{https://sites.bu.edu/bwalsh/research/}.
+            interaction between the solar wind and Earth’s \index{magnetosphere}. The telescope will
+            operate for roughly 6.5 days from the lunar surface on the Blue Ghost 1 lander from 
+            \index{Mare Crisium}. The project is led by \gls{bu} and is a collaboration with NASA 
+            Goddard, Johns Hopkins University, the University of Leicester, and the University of
+            Miami. \gls{lexi} is part of NASA’s Lunar Science and Technology Program. You
+            can find more details \href{https://sites.bu.edu/bwalsh/research/}{here}\footnote[1]
+            {https://sites.bu.edu/bwalsh/research/}. \gls{msb} and \gls{lsb} are the most and least
+            significant bits, respectively. \gls{sci} and \gls{hk} are science and housekeeping
+            data, respectively. \gls{hv} is high voltage. \gls{bu} is \index{Boston} 
+            \index{University}.
+
         \subsection[Short Title 2]{Second subsection}
             \lipsum[3-5]
             % Include a sample image
@@ -105,5 +122,12 @@
             \end{table}
 
     \include{bibtex}
-    \printglossary[type=\acronymtype,title=Glossary of Abbreviations]
+    % available styles:
+    %    list. Writes the defined term in boldface font
+    %    altlist. Inserts newline after the term and indents the description.
+    %    listgroup. Group the terms based on the first letter.
+    %    listhypergroup. Adds hyperlinks at the top of the index.
+    \glossarystyle{altlist}
+    \printglossary[type=\acronymtype, title=Glossary of Abbreviations, toctitle=Glossary]
+    \printindex
 \end{document}
