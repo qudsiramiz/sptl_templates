@@ -1,0 +1,224 @@
+\glsdefs@newdocentry{msb}%
+{%
+name={MSB},%
+sort={MSB},%
+type={main},%
+first={Most Significant Bit\glsspace (MSB)},%
+firstplural={Most Significant Bit\acrpluralsuffix \glsspace (MSB\acrpluralsuffix )},%
+text={MSB},%
+plural={MSB\acrpluralsuffix },%
+description={Most Significant Bit},%
+descriptionplural={Most Significant Bit\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Most Significant Bit},%
+longplural={Most Significant Bits},%
+short={MSB},%
+shortplural={MSBs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{lsb}%
+{%
+name={LSB},%
+sort={LSB},%
+type={main},%
+first={Least Significant Bit\glsspace (LSB)},%
+firstplural={Least Significant Bit\acrpluralsuffix \glsspace (LSB\acrpluralsuffix )},%
+text={LSB},%
+plural={LSB\acrpluralsuffix },%
+description={Least Significant Bit},%
+descriptionplural={Least Significant Bit\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Least Significant Bit},%
+longplural={Least Significant Bits},%
+short={LSB},%
+shortplural={LSBs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{lexi}%
+{%
+name={LEXI},%
+sort={LEXI},%
+type={main},%
+first={Lunar Environment heliospheric X-ray Image\glsspace (LEXI)},%
+firstplural={Lunar Environment heliospheric X-ray Image\acrpluralsuffix \glsspace (LEXI\acrpluralsuffix )},%
+text={LEXI},%
+plural={LEXI\acrpluralsuffix },%
+description={Lunar Environment heliospheric X-ray Image},%
+descriptionplural={Lunar Environment heliospheric X-ray Image\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Lunar Environment heliospheric X-ray Image},%
+longplural={Lunar Environment heliospheric X-ray Images},%
+short={LEXI},%
+shortplural={LEXIs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{met}%
+{%
+name={MET},%
+sort={MET},%
+type={main},%
+first={Mission Elapsed Time\glsspace (MET)},%
+firstplural={Mission Elapsed Time\acrpluralsuffix \glsspace (MET\acrpluralsuffix )},%
+text={MET},%
+plural={MET\acrpluralsuffix },%
+description={Mission Elapsed Time},%
+descriptionplural={Mission Elapsed Time\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Mission Elapsed Time},%
+longplural={Mission Elapsed Times},%
+short={MET},%
+shortplural={METs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{sci}%
+{%
+name={SCI},%
+sort={SCI},%
+type={main},%
+first={Science Data\glsspace (SCI)},%
+firstplural={Science Data\acrpluralsuffix \glsspace (SCI\acrpluralsuffix )},%
+text={SCI},%
+plural={SCI\acrpluralsuffix },%
+description={Science Data},%
+descriptionplural={Science Data\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Science Data},%
+longplural={Science Datas},%
+short={SCI},%
+shortplural={SCIs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{hk}%
+{%
+name={HK},%
+sort={HK},%
+type={main},%
+first={Housekeeping Data\glsspace (HK)},%
+firstplural={Housekeeping Data\acrpluralsuffix \glsspace (HK\acrpluralsuffix )},%
+text={HK},%
+plural={HK\acrpluralsuffix },%
+description={Housekeeping Data},%
+descriptionplural={Housekeeping Data\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Housekeeping Data},%
+longplural={Housekeeping Datas},%
+short={HK},%
+shortplural={HKs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{hv}%
+{%
+name={HV},%
+sort={HV},%
+type={main},%
+first={High Voltage\glsspace (HV)},%
+firstplural={High Voltage\acrpluralsuffix \glsspace (HV\acrpluralsuffix )},%
+text={HV},%
+plural={HV\acrpluralsuffix },%
+description={High Voltage},%
+descriptionplural={High Voltage\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={High Voltage},%
+longplural={High Voltages},%
+short={HV},%
+shortplural={HVs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{bu}%
+{%
+name={BU},%
+sort={BU},%
+type={main},%
+first={Boston University\glsspace (BU)},%
+firstplural={Boston University\acrpluralsuffix \glsspace (BU\acrpluralsuffix )},%
+text={BU},%
+plural={BU\acrpluralsuffix },%
+description={Boston University},%
+descriptionplural={Boston University\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Boston University},%
+longplural={Boston Universitys},%
+short={BU},%
+shortplural={BUs},%
+counter={page},%
+parent={},%
+%
+}%
+
