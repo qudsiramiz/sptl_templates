@@ -6,44 +6,89 @@
 \usepackage{graphicx}
 \usepackage{lipsum}% Used for dummy text.
 \usepackage[yyyymmdd,hhmmss]{datetime}
+\usepackage{transparent}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{caption}
+\captionsetup[table]{font=small,skip=0pt}
+\captionsetup[figure]{font=small,skip=5pt}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{natbib}
+\crefname{subsection}{subsection}{subsections}
+\usepackage{subcaption}
+\usepackage[acronym]{glossaries}
+\makeglossaries
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=magenta,      
+    urlcolor=magenta,
+    pdfpagemode=FullScreen,
+    }
 
 % Note: You can change the layout of page and author name and other details in the title_page.tex file
 % Define a color corresponding to the BU color.
 \definecolor{bured}{rgb}{0.8, 0.0, 0.0}
 
+% A new command to insert a page without adding to the page number
+\newcommand\npnpn[1]{\clearpage\thispagestyle{empty}\addtocounter{page}{-1} \ \clearpage}
+
 \begin{document}
-    %\include{title_page}
-    \begin{titlepage}
-    %\newgeometry{left=7.5cm} %defines the geometry for the titlepage
-    \pagecolor{bured}
-    \noindent
-    \begin{figure}[t]
-            \hspace{-3em}\includegraphics[height=.125\textheight]{reports/latex/images/BostonUni.png} \hspace{6em}
-            \includegraphics[height=.125\textheight]{reports/latex/images/SPTL_logo_greyscale.png}
-        \end{figure}
-    \color{white}
-    \makebox[0pt][l]{\rule{1.3\textwidth}{2pt}}
-    \par
-    \noindent
-
-    \begin{center}
-        \vspace{10em}
-        \huge{\uppercase{Title of a report based on research we somehow got funded!}}\\
-    \end{center}
-
-    \vskip\baselineskip
-
-    % Begin right align text
-    \begin{flushright}
-        \textcolor{black}{Author Name}\\
-        \textcolor{black}{\today   ~@ \currenttime ~GMT}\\
-        \textcolor{black}{Center for Space Physics}\\
-        \textcolor{black}{Boston University}\\
-    \end{flushright}
-
-    \vfill
-    \noindent
+    \include{title_page}
+    \include{abbreviation_list}
     \nopagecolor% Use this to restore the color pages to white
-\end{titlepage}
-    \lipsum[1-9]
-\end{document}  
+
+    %\npnpn
+    \tableofcontents
+    \npnpn
+
+    % Insert a list of figures
+    \listoffigures
+
+    % Insert a list of tables
+    \listoftables
+    \npnpn
+    % % Include the sptl file at the bottom of the new page
+
+    \section[Intro]{Introduction}
+        \subsection[Short Title 1]{First subsection}
+            \lipsum[1-2] \citep{Acuna1995}
+        \subsection[Short Title 2]{Second subsection}
+            \lipsum[3-9]
+            % Include a sample image
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/lexi_01.jpg}
+                \caption[First Fig]{This is a sample image of LEXI}
+                \label{fig:lexi_01}
+            \end{figure}
+
+            % Include a sample table
+            \begin{table}[h]
+                \centering
+                \caption[First Table]{This is a sample table}
+                \label{tab:sample_table}
+                \begin{tabular}{| p {0.1\textwidth} | p {0.1\textwidth} | p {0.2\textwidth} |
+                    p {0.1\textwidth} | p {0.1\textwidth} |}
+                    \hline
+                    \textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} & \textbf{Column 4} &
+                    \textbf{Column 5} \\
+                    \hline
+                    \multirow{2}{*}{Row 1} & 1 & 2 & 3 & 4 \\
+                    & 5 & 6 & 7 & 8 \\
+                    \hline
+                    \multirow{2}{*}{Row 2} & 1 & 2 & 3 & 4 \\
+                    & 5 & 6 & 7 & 8 \\
+                    \hline
+                    \multirow{2}{*}{Row 3} & 1 & 2 & 3 & 4 \\
+                    & 5 & 6 & 7 & 8 \\
+                    \hline
+                \end{tabular}
+            \end{table}
+
+    \include{bibtex}
+    \printglossary[type=\acronymtype,title=Glossary of Abbreviations]
+\end{document}

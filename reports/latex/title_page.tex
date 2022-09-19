@@ -1,11 +1,10 @@
-\definecolor{bured}{rgb}{0.8, 0.0, 0.0}
 \begin{titlepage}
     %\newgeometry{left=7.5cm} %defines the geometry for the titlepage
     \pagecolor{bured}
     \noindent
     \begin{figure}[t]
-            \hspace{-3em}\includegraphics[height=.125\textheight]{reports/latex/images/BostonUni.png} \hspace{6em}
-            \includegraphics[height=.125\textheight]{reports/latex/images/SPTL_logo_greyscale.png}
+            \hspace{-3em}\includegraphics[height=.125\textheight]{images/BostonUni.png} \hspace{6em}
+            \includegraphics[height=.125\textheight]{images/SPTL_logo_greyscale.png}
         \end{figure}
     \color{white}
     \makebox[0pt][l]{\rule{1.3\textwidth}{2pt}}
@@ -21,13 +20,40 @@
 
     % Begin right align text
     \begin{flushright}
+        \Large{
         \textcolor{black}{Author Name}\\
-        \textcolor{black}{\today   ~@ \currenttime ~GMT}\\
         \textcolor{black}{Center for Space Physics}\\
         \textcolor{black}{Boston University}\\
+        }
     \end{flushright}
-
+    % Add text at the bottom of the page
+    \vspace{8em}
+    \begin{center}
+        \textcolor{black}{Last updated on: \today ~@ \currenttime ~GMT}\\
+        %\copyright{2019, Boston University}
+    \end{center}
     \vfill
     \noindent
-    \nopagecolor% Use this to restore the color pages to white
+
+    %\clearpage\thispagestyle{empty}\addtocounter{page}{-1}
+    \newpage\thispagestyle{empty}\addtocounter{page}{-1}
+    \nopagecolor%
+    % Add text mentioning copyright
+    \vspace*{\fill}
+    \begin{center}
+        \textcolor{black}{\copyright{2022, Boston University}\\
+        This document is the property of Space Physics and Technology Laboratory (SPTL) at Boston
+        University.\\
+        No part of this report may be used for commercial purposes without the express permission of
+        institute and the author.}\\
+    \end{center}
+    \vspace*{\fill}
+    \begin{figure}[b]
+        %\vspace{0.35\paperheight}
+        \centering
+            {\transparent{0.2}
+                \includegraphics[height=0.125\textheight]{images/sptl_v2.png}
+            }%
+    \end{figure}
+     \newpage
 \end{titlepage}
