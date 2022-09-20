@@ -68,8 +68,11 @@
     % Insert a list of tables
     \listoftables
     \npnpn
-    % % Include the sptl file at the bottom of the new page
 
+    \glossarystyle{altlist}
+    \printglossary[type=\acronymtype, title=Glossary of Abbreviations, toctitle=Glossary]
+
+    % % Include the sptl file at the bottom of the new page
     \include{glossaries}
     \section[LEXI Overview]{LEXI Overview}
         \subsection[Short tile 1]{A subsection}
@@ -126,7 +129,5 @@
     %    altlist. Inserts newline after the term and indents the description.
     %    listgroup. Group the terms based on the first letter.
     %    listhypergroup. Adds hyperlinks at the top of the index.
-    \glossarystyle{altlist}
-    \printglossary[type=\acronymtype, title=Glossary of Abbreviations, toctitle=Glossary]
     \printindex
 \end{document}
