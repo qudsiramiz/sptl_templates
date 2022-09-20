@@ -1,13 +1,10 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{scrartcl}
 \usepackage[T1]{fontenc}
+\KOMAoptions{listof=numbered}
+\setuptoc{toc}{numbered}
 \usepackage{mathptmx}  % Change this to use different font, right now this is using Times font.
-\usepackage{geometry}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
 \usepackage{amsmath}
-%\usepackage{amssymb}
-%\usepackage{MnSymbol}
-%\usepackage{mathabx}
-%\usepackage{amsfonts}
-%\usepackage{mathalpha}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{lipsum} % Used for dummy text. Can remove it when you are making your report,
@@ -25,6 +22,16 @@
 \usepackage{natbib}
 \usepackage{imakeidx}
 \usepackage[toc,section=section]{glossaries}
+\usepackage[automark,markcase=upper,headsepline]{scrlayer-scrpage}
+\clearpairofpagestyles
+\addtokomafont{pagehead}{\upshape}
+\ihead{\headmark}
+\ohead{\pagemark}
+
+\newcommand{\sectionnumbering}[1]{%
+  \setcounter{section}{0}%
+  \renewcommand{\thesection}{\csname #1\endcsname{section}}%
+}
 
 % Define a color corresponding to the BU color.
 \definecolor{bured}{rgb}{0.8, 0.0, 0.0}
@@ -56,24 +63,29 @@
 \begin{document}
 
     \include{title_page}
-    \nopagecolor% Use this to restore the color pages to white
+    \cleardoubleoddpage
 
     %\npnpn
+    \pagenumbering{Roman}
+    \sectionnumbering{Roman}
     \tableofcontents
-    \npnpn
-
+    \cleardoubleoddpage
     % Insert a list of figures
     \listoffigures
-
+    \cleardoubleoddpage
     % Insert a list of tables
     \listoftables
-    \npnpn
+    \cleardoubleoddpage
 
-    \glossarystyle{altlist}
+    \setglossarystyle{altlist}
     \printglossary[type=\acronymtype, title=Glossary of Abbreviations, toctitle=Glossary]
 
     % % Include the sptl file at the bottom of the new page
     \include{glossaries}
+    \cleardoubleoddpage
+
+    \pagenumbering{arabic}
+    \sectionnumbering{arabic}
     \section[LEXI Overview]{LEXI Overview}
         \subsection[Short tile 1]{A subsection}
             The \gls{lexi} \citep{Kuntz2022} is a soft X-ray 0.1 - 2 keV) imager developed to

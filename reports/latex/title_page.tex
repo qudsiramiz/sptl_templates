@@ -1,6 +1,6 @@
 \begin{titlepage}
-    %\newgeometry{left=7.5cm} %defines the geometry for the titlepage
-    \pagecolor{bured}
+    \newgeometry{left=3em, right=3em, top=4em, bottom=2em}
+\pagecolor{bured}
     \noindent
     \fboxsep=1mm %padding thickness for the frame
     \fboxrule=1.5pt %border thickness for the frame
@@ -8,13 +8,13 @@
         \centering
             \begin{subfigure}{.5\textwidth}
                 \begin{flushleft}
-                    \hspace{-6em}\includegraphics[height=.125\textheight]{images/BostonUni.png}
+                    \hspace{-0em}\includegraphics[height=.1\textheight]{images/BostonUni.png}
                 \end{flushleft}
             \end{subfigure}%
             \begin{subfigure}{.5\textwidth}
                 \begin{flushright}
                     %\vspace*{-0.5em}
-                    \includegraphics[height=.115\textheight]{images/SPTL_logo_greyscale_white.png}
+                    \includegraphics[height=.08\textheight]{images/SPTL_logo_greyscale_white.png}
                     %\fcolorbox{white}{bured}{\includegraphics[height=.11\textheight]{
                     %images/SPTL_logo_greyscale_white.png}}
                 \end{flushright}
@@ -43,17 +43,13 @@
         }
     \end{flushright}
     % Add text at the bottom of the page
-    \vspace{7em}
     \begin{center}
-        \vfill
+        \vspace*{\fill}
         \textcolor{black}{Last updated on: \today ~@ \currenttime ~GMT}\\
         \textcolor{black}{Version: \texttt{V 0.01}}
-        %\copyright{2019, Boston University}
     \end{center}
-    \vfill
     \noindent
 
-    %\clearpage\thispagestyle{empty}\addtocounter{page}{-1}
     \newpage\thispagestyle{empty}\addtocounter{page}{-1}
     \nopagecolor%
     % Add text mentioning copyright
@@ -75,3 +71,5 @@
     \end{figure*}
     \newpage
 \end{titlepage}
+
+\restoregeometry
